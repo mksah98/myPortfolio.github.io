@@ -9,7 +9,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 import devAvatar from '../public/devAvatar.png';
-import myPic from '../public/mypic.jpg'
 import TechnologyUsed from '../components/TechnologyUsed';
 
 export default function Home() {
