@@ -30,12 +30,12 @@ const LandingPage = () => {
         break;
       case "portfolio":
         portfolioImage = "https://user-images.githubusercontent.com/93177337/197675807-1207493d-0ed1-4ddb-90e0-b73cc4b23b7c.png";
-        portfolioUrl = "https://next-protfolio-rahulrawatji.vercel.app/";
-        portfolioGithubUrl = "https://github.com/RahulRawatji/nextProtfolio";
+        portfolioUrl = "https://my-portfolio-mksah98.vercel.app/";
+        portfolioGithubUrl = "https://github.com/mksah98/myPortfolio.github.io";
         description = `A Portfolio Website to showcase about the project and technology I used and worked on.
         This Application is made using NextJs`;
         break;
-      
+
       default:
         break;
     }
@@ -84,7 +84,7 @@ const LandingPage = () => {
         <div className='flex flex-wrap  m-5 gap-10'>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('blogApp')}>A Micro-Blogging App</div>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('movieApp')}>A Movie App</div>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('portfolio')}>Protfolio</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('portfolio')}>Portfolio</div>
         </div>
       </section>
 

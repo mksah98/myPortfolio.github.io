@@ -9,6 +9,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 import devAvatar from '../public/devAvatar.png';
+import myPic from '../public/myPic.jpg'
 import TechnologyUsed from '../components/TechnologyUsed';
 
 export default function Home() {
@@ -19,7 +20,6 @@ export default function Home() {
   const [activeLinkedin, setActiveLinkedin] = useState("");
   const [activeGithub, setActiveGithub] = useState("");
   const [activeMail, setActiveMail] = useState("");
-  const [rotate, setRotate] = useState();
 
   useEffect(() => {
     fetchRandomQuote();
@@ -37,8 +37,8 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
-        <title>Mintu Kumar Protfolio</title>
-        <meta name="description" content="Protfolio Website" />
+        <title>Mintu Kumar Portfolio</title>
+        <meta name="description" content="Portfolio Website" />
         <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
       </Head>
       <main className='bg-white px-10  dark:bg-gray-800'>
@@ -72,12 +72,10 @@ export default function Home() {
           <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
             <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
             <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-            <AiFillMail  title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+            <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
           </div>
         </section>
-
         <TechnologyUsed />
-
         <section>
           <div>
             <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>What I Provide</h3>
@@ -89,7 +87,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
           <div className='grid justify-items-end p-2'>
             <AiOutlineReload onClick={() => fetchRandomQuote()} />
@@ -101,15 +98,13 @@ export default function Home() {
             {quoteData.author}
           </p>
         </div>
-
         <section className=' mt-4'>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
           <div className='lg:flex gap-10'>
-
             <div className='basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
               <h3 className='text-xl font-bold px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
-                Calculator, Find An Activity, A Protfolio
+                Calculator, Find An Activity
               </p>
               <Link href="/levelB">
                 <div className='p-2 shadow-md mt-3 hover:bg-teal-300 font-burtons cursor-pointer'>
@@ -117,11 +112,10 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-
             <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
               <h3 className='text-xl font-bold px-2'>Web Applications Projects</h3>
               <p className='py-1 flex-wrap'>
-                Micro Blogging App, Movies App, A Portfolio
+                Micro Blogging App, Movies App
               </p>
               <Link href="/levelA">
                 <div className='p-2 shadow-md hover:bg-teal-300 mt-3 font-burtons cursor-pointer'>
@@ -129,37 +123,32 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-
           </div>
         </section>
-
         <section className='border-spacing-4 shadow-lg font-burtons p-10 m-5 rounded-xl dark:bg-slate-200'>
-          <h3 className='text-3xl py-1 mb-3 '>About me!</h3> 
+          <h3 className='text-3xl py-1 mb-3 '>About me!</h3>
           <div className='flex flex-wrap gap-4 justify-around md:p-5 bg-slate-100 rounded-lg shadow-lg '>
-          <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
-            `I am a dedicated and diligent individual toward the world of computers.
-            having a self driven attitude to embrace new tools and skills.
-            i have niche towards web-development. Living life, having fun, enjoying the sunsets.
-            tea, music, dance and nature.`
+            <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
+              `I am a dedicated and diligent individual toward the world of computers.
+              having a self driven attitude to embrace new tools and skills.
+              i have niche towards web-development. Living life, having fun, enjoying the sunsets.
+              tea, music, dance and nature.`
             </p>
-            <img className="w-1/4 rounded-full border-4 "src={"https://media-exp1.licdn.com/dms/image/D4D35AQEtmtt_R8e6qg/profile-framedphoto-shrink_400_400/0/1666102876159?e=1667275200&v=beta&t=gbC2Y5HZBQHKVkRo1b99mNy7ZLHaCp3Orzrq4imDJJI"}>
+            <img className="w-1/4 rounded-full border-4 " src={myPic}>
             </img>
           </div>
         </section>
-
         <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
           <div className='font-burtons p-5 md:text-10md flex-col '>
             <div className='flex items-center flex-wrap gap-5'>
               <h3 className='m-4' >Associate Software Engineer @BYJU's 💭</h3>
-              <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-4xl'>Yes</span></h3>
-              <h3 className='m-4'>Mail: <span className='text-red-500 md:text-2xl'><a>krmintusah@gmail.com</a></span></h3>
+              <h3 className='m-4'>Open for opportunities: <span className='text-red text-4xl'>Yes</span></h3>
+              <h3 className='m-4'>Mail: <span className='text-red md:text-2xl'><a>krmintusah@gmail.com</a></span></h3>
             </div>
           </div>
         </div>
-
       </main>
     </div>
-
   )
 }
