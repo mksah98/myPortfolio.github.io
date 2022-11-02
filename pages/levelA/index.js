@@ -29,7 +29,7 @@ const LandingPage = () => {
         description = `A Simple Movie Made using ReactJs and NodeJs`;
         break;
       case "portfolio":
-        portfolioImage = "https://user-images.githubusercontent.com/93177337/197675807-1207493d-0ed1-4ddb-90e0-b73cc4b23b7c.png";
+        portfolioImage = "https://user-images.githubusercontent.com/93177298/199567034-f2a809bb-1146-4401-b25e-68172bc6217d.png";
         portfolioUrl = "https://my-portfolio-mksah98.vercel.app/";
         portfolioGithubUrl = "https://github.com/mksah98/myPortfolio.github.io";
         description = `A Portfolio Website to showcase about the project and technology I used and worked on.
