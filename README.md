@@ -8,7 +8,7 @@
 - Tailwind CSS
 - Axios
 
-#### Preview -> [Click Here](https://next-protfolio-mksah98.vercel.app)
+#### Preview -> [Click Here](https://my-portfolio-mksah98.vercel.app/)
 
 #### Screenshot
 

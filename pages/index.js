@@ -55,7 +55,7 @@ export default function Home() {
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer' color={darkMode ? 'white' : ""} />
               </li>
               <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
+                <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1jqkeK_j7QOBdkJW97uUeNJPo67qmMO_o/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
               </li>
             </ul>
           </nav>
