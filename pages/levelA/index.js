@@ -16,18 +16,6 @@ const LandingPage = () => {
     let description = "";
 
     switch (projectName) {
-      case "blogApp":
-        portfolioImage = "https://user-images.githubusercontent.com/93177337/197684158-385b98f0-12b5-4e17-8973-ea38708df472.png";
-        portfolioUrl = "https://micro-blogging-app.vercel.app/";
-        portfolioGithubUrl = "https://github.com/RahulRawatji/micro-blogging-app";
-        description = `A Full Stack Micro Blogging Application made using NextJs and Firebase. With Features Like Authenticating a user, Making a Post, Editing and Deleting the Post, Other users can make Comments on a Post`;
-        break;
-      case "movieApp":
-        portfolioImage = "https://user-images.githubusercontent.com/93177337/139305542-64c80736-7068-4993-b00c-f19fee6a3a4e.jpg";
-        portfolioUrl = "https://micro-blogging-app.vercel.app/";
-        portfolioGithubUrl = "https://github.com/RahulRawatji/movies-app";
-        description = `A Simple Movie Made using ReactJs and NodeJs`;
-        break;
       case "portfolio":
         portfolioImage = "https://user-images.githubusercontent.com/93177298/199567034-f2a809bb-1146-4401-b25e-68172bc6217d.png";
         portfolioUrl = "https://my-portfolio-mksah98.vercel.app/";
@@ -39,22 +27,24 @@ const LandingPage = () => {
       default:
         break;
     }
-    return (<div className='flex-col m-5 justify-center items-center'>
-      <div className='flex gap-4 justify-around'>
-        <div className=' basis-1/2'>
-          <img src={portfolioImage} className="object-cover" />
+    return (
+      <div className='flex-col m-5 justify-center items-center'>
+        <div className='flex gap-4 justify-around'>
+          <div className=' basis-1/2'>
+            <img src={portfolioImage} className="object-cover" />
+          </div>
+          <div className=' basis-1/2 items-center'>
+            <p className='text-center p-2 font-burtons text-xl'>
+              {description}
+            </p>
+          </div>
         </div>
-        <div className=' basis-1/2 items-center'>
-          <p className='text-center p-2 font-burtons text-xl'>
-            {description}
-          </p>
+        <div className='flex gap-4 justify-center mt-3'>
+          {projectName !== 'movieApp' ? <button onClick={() => window.open(portfolioUrl)} className=' shadow-lg px-4 text-center py-1 text-[1.25rem] font-burtons  bg-cyan-500 dark:text-white rounded-lg'>Preview</button> : ''}
+          <button onClick={() => window.open(portfolioGithubUrl)} className='px-4 text-center py-1 text-[1.25rem] drop-shadow-lg font-burtons  bg-cyan-500 rounded-lg dark:text-white'>Code</button>
         </div>
       </div>
-      <div className='flex gap-4 justify-center mt-3'>
-        {projectName !== 'movieApp' ? <button onClick={() => window.open(portfolioUrl)} className=' shadow-lg px-4 text-center py-1 text-[1.25rem] font-burtons  bg-cyan-500 dark:text-white rounded-lg'>Preview</button> : ''}
-        <button onClick={() => window.open(portfolioGithubUrl)} className='px-4 text-center py-1 text-[1.25rem] drop-shadow-lg font-burtons  bg-cyan-500 rounded-lg dark:text-white'>Code</button>
-      </div>
-    </div>)
+    )
   };
 
   return (<div className={darkMode ? "dark" : ""}>
@@ -82,8 +72,6 @@ const LandingPage = () => {
       <section>
         <h2 className='text-4xl mb-5 font-burtons dark:text-white'>Projects</h2>
         <div className='flex flex-wrap  m-5 gap-10'>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('blogApp')}>A Micro-Blogging App</div>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('movieApp')}>A Movie App</div>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('portfolio')}>Portfolio</div>
         </div>
       </section>

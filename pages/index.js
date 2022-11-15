@@ -71,7 +71,7 @@ export default function Home() {
           <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
             <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
             <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-            <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+            <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} onClick={() => window.open("mailto:krmintusah@gmail.com")} />
           </div>
         </section>
         <TechnologyUsed />
@@ -90,7 +90,7 @@ export default function Home() {
           <div className='grid justify-items-end p-2'>
             <AiOutlineReload onClick={() => fetchRandomQuote()} />
           </div>
-          <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>
+          <h2 className='md:text-5xl sm:text-4xl font-burtons text-yellow-600 text-center md:px-10'>
             "{quoteData.text} "
           </h2>
           <p className='md:text-xl text-center px-20 m-2'>
@@ -114,7 +114,7 @@ export default function Home() {
             <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
               <h3 className='text-xl font-bold px-2'>Web Applications Projects</h3>
               <p className='py-1 flex-wrap'>
-                Micro Blogging App, Movies App, My Portfolio
+                My Portfolio
               </p>
               <Link href="/levelA">
                 <div className='p-2 shadow-md hover:bg-teal-300 mt-3 font-burtons cursor-pointer'>
@@ -130,8 +130,7 @@ export default function Home() {
             <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
               `I am a dedicated and diligent individual toward the world of computers.
               having a self driven attitude to embrace new tools and skills.
-              i have niche towards web-development. Living life, having fun, enjoying the sunsets.
-              tea, music, dance and nature.`
+              I have niche towards web-development. Living life, having fun, enjoying the sunset & nature.`
             </p>
             <img className="w-1/4 rounded-full border-4 " src={'https://user-images.githubusercontent.com/93177298/199574857-d98d393d-44d1-472c-91ee-0ad8cfb6026f.png'}>
             </img>
@@ -140,10 +139,10 @@ export default function Home() {
         <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
           <div className='font-burtons p-5 md:text-10md flex-col '>
-            <div className='flex items-center flex-wrap gap-5'>
-              <h3 className='m-4' >Associate Software Engineer @BYJU's 💭</h3>
-              <h3 className='m-4'>Open for opportunities: <span className='text-red text-4xl'>Yes</span></h3>
-              <h3 className='m-4'>Mail: <span className='text-red md:text-2xl'><a>krmintusah@gmail.com</a></span></h3>
+            <div className='flex items-center flex-wrap gap-12'>
+              <h3 className='m-4' >Associate Software Engineer @BYJU's <span className='text-black-500 text-2xl'>💭</span></h3>
+              <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-2xl'>Yes</span></h3>
+              <h3 className='m-4'>Mail: <span className='text-red-500 md:text-2xl'><a>krmintusah@gmail.com</a></span></h3>
             </div>
           </div>
         </div>
