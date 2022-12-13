@@ -138,9 +138,9 @@ export default function Home() {
         </section>
         <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
-          <div className='font-burtons p-5 md:text-10md flex-col '>
+          <div className='font-burtons p-5 md:text-12md flex-col '>
             <div className='flex items-center flex-wrap gap-12'>
-              <h3 className='m-4' >Software Engineer @BYJU's <span className='text-black-500 text-2xl'>💭</span></h3>
+              <h3 className='m-4' > <span className='text-red-500 text-2xl'>Software Engineer</span> @BYJU's <span className='text-black-500 text-2xl'>💭</span></h3>
               <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-2xl'>Yes</span></h3>
               <h3 className='m-4'>Mail: <span className='text-red-500 md:text-2xl'><a>krmintusah@gmail.com</a></span></h3>
             </div>
